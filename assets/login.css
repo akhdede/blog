@@ -1,0 +1,30 @@
+body{
+	background: url(../assets/img/background.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0 -30px;
+}
+.main-section{
+	margin-top: 150px;
+}
+
+.modal-content{
+	background-color: #434e5a;
+	opacity: .8;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.user-img{
+	margin-top: -60px;
+}
+
+.user-img img{
+	width: 90px;
+	height: 90px;
+}
+
+.modal-content h3{
+	margin: 10px 0 15px 0;
+}
+
