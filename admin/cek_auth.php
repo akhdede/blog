@@ -1,12 +1,24 @@
 <?php
 include '../config/init.php';
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-if(isset($_POST['action']) && $_POST['action'] == 'login'){
-	if($auth->cek_login == true){
-		echo '1';
+if(empty($username) && empty($password)){
+	echo 4;
+}
+elseif(empty($username) && !empty($password)){
+	echo 3;
+}
+elseif(!empty($username) && empty($password)){
+	echo 2;
+}
+else{
+	if($auth->cek_login($username, $password) == true){
+		echo 1;
 	}
 	else{
-		echo '0';
+		echo 0;
 	}
 }
+
 ?>

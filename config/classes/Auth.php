@@ -17,16 +17,7 @@ class Auth{
 
 			$count = $query->rowCount();
 
-			$data = $query->fetch(PDO::FETCH_ASSOC);
-
-			while ($data = $d) {
-				$d['username'] = $user;
-			}
-
-
 			if($count > 0){
-				$_SESSION['login'] = true;
-				$_SESSION['user'] = $user;
 				return true;
 			}
 			else{
